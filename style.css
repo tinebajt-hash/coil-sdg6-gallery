@@ -1,0 +1,363 @@
+/* ============================================================
+   COIL · SDG 12 – spletna galerija
+   Barvna paleta SDG 12: temno vijolična/rumena (official color #BF8B2E)
+   ============================================================ */
+
+:root {
+  --primary: #8143a9;        /* vijolična – barva cilja SDG 12 */
+  --primary-dark: #4a2560;
+  --accent: #bf8b2e;         /* zlato-rumena poudarka */
+  --bg: #faf7f2;
+  --surface: #ffffff;
+  --text: #2b2140;
+  --muted: #6f6684;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(43, 33, 64, 0.12);
+  --font-head: "Segoe UI", "Trebuchet MS", sans-serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ---------- Navigacija ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 5vw;
+  background: rgba(74, 37, 96, 0.95);
+  backdrop-filter: blur(6px);
+  color: #fff;
+}
+
+.brand {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+.brand span { color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  gap: 1.4rem;
+  list-style: none;
+}
+.nav-links a {
+  color: #f1eaf7;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ---------- Naslovnica / hero ---------- */
+.hero {
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    linear-gradient(160deg, rgba(74, 37, 96, 0.92), rgba(129, 67, 169, 0.82)),
+    url("images/dijakA/foto-01.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 8vw;
+  color: #fff;
+  max-width: 900px;
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.hero-sub { font-size: 1.1rem; margin-bottom: 2rem; color: #ece4f5; }
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #241a05;
+  font-weight: 600;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+/* ---------- Sekcije ---------- */
+.section { padding: 4.5rem 8vw; }
+.section h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+}
+
+.section-intro { background: var(--surface); }
+.section-problem { background: linear-gradient(180deg, #f3edf8, var(--bg)); }
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.targets { margin-top: 1rem; list-style: none; }
+.targets li { padding: 0.4rem 0; border-bottom: 1px dashed #e0d6ea; }
+
+.intro-figure img { border-radius: var(--radius); box-shadow: var(--shadow); }
+.intro-figure figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; text-align: center; }
+
+.problem-content { max-width: 800px; }
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 5px solid var(--accent);
+  background: #fff;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-style: italic;
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+}
+
+/* ---------- Galerija ---------- */
+.gallery-hint { color: var(--muted); margin-bottom: 0.8rem; }
+
+.filters { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.filter-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn.active,
+.filter-btn:hover { background: var(--primary); color: #fff; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.25s, opacity 0.3s;
+}
+.card:hover { transform: translateY(-5px) scale(1.02); }
+.card img { height: 210px; width: 100%; object-fit: cover; }
+.card figcaption {
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.card.hidden { display: none; }
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 10, 35, 0.92);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 2rem;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-height: 75vh; border-radius: var(--radius); }
+.lightbox p { color: #eee; margin-top: 1rem; }
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.6rem;
+  font-size: 2.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ---------- Kviz ---------- */
+.question {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+.question p { font-weight: 600; margin-bottom: 0.6rem; }
+.question label {
+  display: block;
+  padding: 0.35rem 0;
+  cursor: pointer;
+}
+.quiz-result {
+  margin-top: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+.quiz-result.correct { color: #1b7a3d; }
+.quiz-result.wrong { color: #a12626; }
+
+/* ---------- Anketa ---------- */
+.poll-results { margin-top: 1.5rem; }
+.poll-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+.poll-bar .bar-track {
+  flex: 1;
+  height: 18px;
+  background: #e8dff2;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.poll-bar .bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  width: 0;
+  transition: width 0.6s ease;
+}
+.poll-bar .bar-label { min-width: 170px; font-size: 0.9rem; }
+.poll-btn {
+  margin: 0.3rem 0.4rem 0.3rem 0;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--primary);
+  background: #fff;
+  color: var(--primary-dark);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.poll-btn:hover:not(:disabled) { background: var(--primary); color: #fff; }
+.poll-btn:disabled { opacity: 0.5; cursor: default; }
+
+/* ---------- Video ---------- */
+.video-hint { color: var(--muted); margin-bottom: 1.5rem; }
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.video-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+}
+.video-card h3 { color: var(--primary-dark); margin-bottom: 0.8rem; }
+.video-placeholder {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-dark);
+  border-radius: var(--radius);
+}
+.video-placeholder a { color: #fff; text-decoration: none; font-weight: 600; }
+
+/* ---------- Zaključek / avtorji ---------- */
+.section-conclusion { background: var(--surface); }
+.section-conclusion p { max-width: 800px; font-size: 1.08rem; }
+
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.4rem;
+}
+.author-card {
+  background: var(--surface);
+  border-top: 5px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
+}
+.author-card h3 { color: var(--primary-dark); margin-bottom: 0.7rem; }
+.author-card ul { list-style: none; }
+.author-card li { padding: 0.25rem 0; font-size: 0.95rem; }
+.author-card li::before { content: "✔ "; color: var(--accent); }
+
+/* ---------- Noga ---------- */
+.footer {
+  background: var(--primary-dark);
+  color: #d9cbe8;
+  text-align: center;
+  padding: 2rem 5vw;
+}
+.footer a { color: var(--accent); text-decoration: none; }
+
+/* ---------- Odzivnost (mobile) ---------- */
+@media (max-width: 760px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    background: var(--primary-dark);
+    width: 100%;
+    padding: 1rem 5vw;
+    gap: 0.8rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; }
+  .intro-grid { grid-template-columns: 1fr; }
+  .section { padding: 3rem 6vw; }
+}

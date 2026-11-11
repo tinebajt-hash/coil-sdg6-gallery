@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spletna galerija COIL – SDG 12: Odgovorna poraba in proizvodnja">
+  <title>COIL · SDG 12 – Odgovorna poraba in proizvodnja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NASLOVNICA (Dijak A) ============ -->
+  <header class="hero" id="domov">
+    <nav class="navbar">
+      <a href="#domov" class="brand">🌍 COIL<span>·SDG12</span></a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Meni">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sdg12">SDG 12</a></li>
+        <li><a href="#tezava">Težava</a></li>
+        <li><a href="#galerija">Galerija</a></li>
+        <li><a href="#kviz">Kviz</a></li>
+        <li><a href="#anketa">Anketa</a></li>
+        <li><a href="#avtorji">Avtorji</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <p class="hero-kicker">COIL projekt · Spletna galerija</p>
+      <h1>Odgovorna poraba<br>in proizvodnja</h1>
+      <p class="hero-sub">Cilj trajnostnega razvoja št. 12 (SDG 12) – kako vsakodnevne odločitve
+        vplivajo na planet. Fotografi, kviz in anketa dijakov dveh šol.</p>
+      <a href="#sdg12" class="btn btn-primary">Razišči podrobneje ↓</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ UVOD: PREDSTAVITEV SDG 12 (Dijak A) ============ -->
+    <section id="sdg12" class="section section-intro">
+      <h2>Kaj je SDG 12?</h2>
+      <div class="intro-grid">
+        <div class="intro-text">
+          <p>
+            <strong>Cilj 12 – Odgovorna poraba in proizvodnja</strong> poziva k zmanjšanju
+            potrošnje naravnih virov ter h preprečevanju onesnaževanja in količin odpadkov.
+            Gre za to, da <em>delaš več in bolje z manj</em>: da izdelki zdržijo dlje, da
+            hrane ne metamo stran in da pred nakupom vprašamo – <em>ali tega res potrebujem?</em>
+          </p>
+          <ul class="targets">
+            <li>🍽️ Prepoloviti globalno količino izgubljene hrane do leta 2030.</li>
+            <li>♻️ Zmanjšati odpade s preprečevanjem, zmanjševanjem, predelavo in ponovno uporabo.</li>
+            <li>🛍️ Spodbujati podjetja k trajnostnim postopkom in preglednemu poročanju.</li>
+            <li>👣 Vsak posameznik lahko spremeni navade: nakupi, popravila, ponovna raba.</li>
+          </ul>
+        </div>
+        <figure class="intro-figure">
+          <img src="images/dijakA/foto-01.jpg" alt="Simbolična fotografija projekta">
+          <figcaption>Fotografija: Dijak A</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ OPIS IZBRANE TEŽAVE (Dijak B) ============ -->
+    <section id="tezava" class="section section-problem">
+      <h2>Izbrana težava: hitra moda in tekstilni odpadki</h2>
+      <div class="problem-content">
+        <p>
+          Povprečen Evropec letno kupi okoli <strong>6 kg oblačil</strong>, manj kot
+          <strong>1 kg</strong> pa ga odda v recikliranje. Hitra moda pomeni poceni oblačila,
+          ki se hitro uničijo ali izidejo iz mode – končajo na odlagališčih ali se sežgejo.
+          Pri tem nastaja onesnaženje vode, mikroplastika in velik ogljični odtis.
+        </p>
+        <blockquote>
+          „Najbolj trajnostno oblačilo je tisto, ki ga že imaš v omari.“
+        </blockquote>
+        <p>V galeriji spodaj si ogledata dijaka, kako sta z objektivom zabeležila
+          problem pretirane porabe – in rešitve, ki jih lahko uporabiva vsak dan.</p>
+      </div>
+    </section>
+
+    <!-- ============ GALERIJA (filtriranje po avtorjih) ============ -->
+    <section id="galerija" class="section section-gallery">
+      <h2>Fotografska galerija</h2>
+      <p class="gallery-hint">Filtriraj fotografije po avtorju:</p>
+
+      <div class="filters" role="group" aria-label="Filtriranje fotografij">
+        <button class="filter-btn active" data-filter="vsi">Vsi</button>
+        <button class="filter-btn" data-filter="dijakA">Dijak A</button>
+        <button class="filter-btn" data-filter="dijakB">Dijak B</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Fotografije Dijaka A (najmanj 6) -->
+        <figure class="card dijakA"><img src="images/dijakA/foto-01.jpg" alt="Odpadne plastične steklenice"><figcaption>Plastični odpadki · A</figcaption></figure>
+        <figure class="card dijakA"><img src="images/dijakA/foto-02.jpg" alt="Polni koši za smeti"><figcaption>Prepolnjeni koši · A</figcaption></figure>
+        <figure class="card dijakA"><img src="images/dijakA/foto-03.jpg" alt="Zavržena hrana"><figcaption>Zavržena hrana · A</figcaption></figure>
+        <figure class="card dijakA"><img src="images/dijakA/foto-04.jpg" alt="Oblačila v second shopu"><figcaption>Second hand · A</figcaption></figure>
+        <figure class="card dijakA"><img src="images/dijakA/foto-05.jpg" alt="Tržnica z lokalno pridelano zelenjavo"><figcaption>Lokalna tržnica · A</figcaption></figure>
+        <figure class="card dijakA"><img src="images/dijakA/foto-06.jpg" alt="Popravilo kolesa"><figcaption>Popravilo namesto nakupa · A</figcaption></figure>
+
+        <!-- Fotografije Dijaka B (najmanj 6) -->
+        <figure class="card dijakB"><img src="images/dijakB/foto-01.jpg" alt="Embalaža za hitro hrano"><figcaption>Enkratna embalaža · B</figcaption></figure>
+        <figure class="card dijakB"><img src="images/dijakB/foto-02.jpg" alt="Hrupna obleka iz hitre mode"><figcaption>Hitra moda · B</figcaption></figure>
+        <figure class="card dijakB"><img src="images/dijakB/foto-03.jpg" alt="Ločevanje odpadkov"><figcaption>Ločevanje · B</figcaption></figure>
+        <figure class="card dijakB"><img src="images/dijakB/foto-04.jpg" alt="Kompostnik"><figcaption>Kompostiranje · B</figcaption></figure>
+        <figure class="card dijakB"><img src="images/dijakB/foto-05.jpg" alt="Ponovno uporabljena vrečka"><figcaption>Tekstilna vrečka · B</figcaption></figure>
+        <figure class="card dijakB"><img src="images/dijakB/foto-06.jpg" alt="Prazen butik z razprodajo"><figcaption>Razprodaje in impulzni nakupi · B</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- Lightbox za povečavo fotografij -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" src="" alt="">
+      <p id="lightbox-caption"></p>
+    </div>
+
+    <!-- ============ INTERAKTIVNI KVIZ ============ -->
+    <section id="kviz" class="section section-quiz">
+      <h2>Interaktivni kviz: Koliko veš o odgovorni porabi?</h2>
+      <form id="quiz-form">
+        <div class="question">
+          <p>1. Kateri material v naravi razgrajuje najdlje?</p>
+          <label><input type="radio" name="q1" value="a"> Papir</label>
+          <label><input type="radio" name="q1" value="b"> Plastika</label>
+          <label><input type="radio" name="q1" value="c"> Bombaž</label>
+        </div>
+        <div class="question">
+          <p>2. Kaj pomeni kratica "3R" trajnostnega ravnanja z odpadki?</p>
+          <label><input type="radio" name="q2" value="a"> Reduce, Reuse, Recycle</label>
+          <label><input type="radio" name="q2" value="b"> Run, Ride, Rest</label>
+          <label><input type="radio" name="q2" value="c"> Read, Write, Research</label>
+        </div>
+        <div class="question">
+          <p>3. Koliko hrane na svetu približno zavržemo?</p>
+          <label><input type="radio" name="q3" value="a"> Okoli 1 %</label>
+          <label><input type="radio" name="q3" value="b"> Okoli 10 %</label>
+          <label><input type="radio" name="q3" value="c"> Okoli tretjino</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Preveri rezultate</button>
+      </form>
+      <p id="quiz-result" class="quiz-result" role="status"></p>
+    </section>
+
+    <!-- ============ ANKETA ============ -->
+    <section id="anketa" class="section section-poll">
+      <h2>Hitra anketa</h2>
+      <p>Katera navada ti je pri odgovorni porabi najbližja?</p>
+      <div id="poll-options">
+        <button class="poll-btn" data-option="hrana">Ne mečem hrane stran</button>
+        <button class="poll-btn" data-option="oblacila">Kupujem rabljena oblačila</button>
+        <button class="poll-btn" data-option="popravila">Stvari popravljam</button>
+        <button class="poll-btn" data-option="brembalaza">Izbiram brez embalaže</button>
+      </div>
+      <div id="poll-results" class="poll-results" role="status"></div>
+    </section>
+
+    <!-- ============ VIDEO (Dijak A + Dijak B) ============ -->
+    <section id="video" class="section section-video">
+      <h2>Predstavitvena videa</h2>
+      <p class="video-hint">Večje videoposnetke objavita na YouTubu z vidljivostjo <em>Unlisted</em>
+        in ju vdelajte s povezavo (namesto nalaganja na GitHub).</p>
+      <div class="video-grid">
+        <div class="video-card">
+          <h3>Dijak A</h3>
+          <!-- Zamenjaj VIDEO_ID_A z dejanskim ID-jem YouTube videa -->
+          <div class="video-placeholder" data-youtube="VIDEO_ID_A">
+            <a href="https://www.youtube.com/watch?v=VIDEO_ID_A" target="_blank" rel="noopener">▶ Video Dijaka A na YouTubu</a>
+          </div>
+        </div>
+        <div class="video-card">
+          <h3>Dijak B</h3>
+          <!-- Zamenjaj VIDEO_ID_B z dejanskim ID-jem YouTube videa -->
+          <div class="video-placeholder" data-youtube="VIDEO_ID_B">
+            <a href="https://www.youtube.com/watch?v=VIDEO_ID_B" target="_blank" rel="noopener">▶ Video Dijaka B na YouTubu</a>
+          </div>
+        </div>
+      </div>
+      <!-- Lokalni videi (če so manjši) shranjeni v mapi videos/ -->
+      <!-- <video controls src="videos/dijakA.mp4"></video> -->
+    </section>
+
+    <!-- ============ ZAKLJUČEK (Dijak B) ============ -->
+    <section id="zakljucek" class="section section-conclusion">
+      <h2>Zaključek</h2>
+      <p>
+        SDG 12 ni le cilj vladi in podjetjem – začenja se z najinimi odločitvami: kaj kupiva,
+        kaj zavrževa in kaj popraviva. Galerija najinega pogleda naj bo majhen prispevek k
+        ozaveščanju skupnosti. Hvala, da ste si vzeli čas za ogled, kviz in anketo!
+      </p>
+    </section>
+
+    <!-- ============ AVTORJI / RAZDELITEV DELA ============ -->
+    <section id="avtorji" class="section section-authors">
+      <h2>Avtorji in razdelitev dela</h2>
+      <div class="authors-grid">
+        <article class="author-card">
+          <h3>Dijak A</h3>
+          <ul>
+            <li>Uvodna predstavitev SDG 12</li>
+            <li>Naslovnica in prvi del galerije</li>
+            <li>6+ lastnih fotografij</li>
+            <li>Predstavitveni video</li>
+          </ul>
+        </article>
+        <article class="author-card">
+          <h3>Dijak B</h3>
+          <ul>
+            <li>Opis izbrane težave</li>
+            <li>Drugi del galerije in zaključek</li>
+            <li>6+ lastnih fotografij</li>
+            <li>Predstavitveni video</li>
+          </ul>
+        </article>
+        <article class="author-card">
+          <h3>Skupaj</h3>
+          <ul>
+            <li>Načrt celotnega videza strani</li>
+            <li>Interaktivni kviz in anketa</li>
+            <li>Testiranje in objava (GitHub Pages)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 COIL projekt · SDG 12 · Narejeno z ❤️ za trajnejši svet.</p>
+    <p><a href="#domov">Nazaj na vrh ↑</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
